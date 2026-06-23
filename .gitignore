@@ -1,40 +1,52 @@
 ```
-# Configuration and Lua-specific ignores
-*.tmp
-*.log
-*.swp
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.class
+*.exe
+*.dll
+*.so
+*.a
+*.out
 
-# Environment files
+# Dependencies
+node_modules/
+venv/
+.venv/
 .env
 .env.local
-*.env.*
+.env.*
 
-# Editor/IDE files
-.vscode/
-.idea/
+# Logs and temp files
+*.log
+*.tmp
 *.swp
 *.swo
+
+# Editors
+.vscode/
+.idea/
 
 # System files
 .DS_Store
 Thumbs.db
 
-# Dependencies and build artifacts
-node_modules/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Build directories
 dist/
 build/
 target/
-.venv/
-venv/
+.gradle/
+
+# Python specific
 .mypy_cache/
 .pytest_cache/
-.coverage
-coverage/
-htmlcov/
 
 # Compressed files
 *.zip
