@@ -1,7 +1,7 @@
 -- Glowing Air Mod
 -- Creates a glowing air block that emits maximum light
 
-minetest.register_node("glow_air:glow_air", {
+minetest.register_node("glow_air:air", {
     description = "Glowing Air",
     drawtype = "airlike",
     paramtype = "light",
@@ -37,7 +37,7 @@ minetest.register_chatcommand("glowair", {
                     -- Only replace air nodes
                     local node = minetest.get_node(node_pos)
                     if node.name == "air" then
-                        minetest.set_node(node_pos, {name="glow_air:glow_air"})
+                        minetest.set_node(node_pos, {name="glow_air:air"})
                     end
                 end
             end
