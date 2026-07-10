@@ -11,9 +11,11 @@ minetest.register_node("glow_air:air", {
     diggable = false,
     buildable_to = true,
     floodable = true,
-    groups = {not_in_creative_inventory = 1},
+    groups = {},
     drop = "",
     light_source = 15,
+    inventory_image = "glow_air_inv.png",
+    wield_image = "glow_air_inv.png",
 })
 
 -- Command to place glowing air around the player
@@ -45,4 +47,14 @@ minetest.register_chatcommand("glowair", {
 
         return true, "Placed glowing air with radius " .. radius
     end,
+})
+
+-- Crafting recipe
+minetest.register_craft({
+    output = 'glow_air:air 4',
+    recipe = {
+        {'', 'default:torch', ''},
+        {'default:torch', 'default:glass', 'default:torch'},
+        {'', 'default:torch', ''},
+    }
 })
